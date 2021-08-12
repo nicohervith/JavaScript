@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+</head>
+<body> 
+ <h1> Fundamentos JavaScript</h1>
+</body>
+<script>
+
+const a= [];
+//El Primer elemento del arreglo siempre es 0
+const b= [1, true, "hola", ["a", "b","c",[1,2,3]]];
+console.log(b);
+//Me devuelve el numero de elementos
+console.log(b.lenght);
+//Si quisiera acceder al "Hola"
+console.log(b[2]);
+//ingreso al arreglo e invoco la letra c
+Console.log(b[3][2]);
+//invoco el numero uno
+console.log(b[3][3][0])
+
+
+const c = Array.of ("x","y","z",9,8,7);
+console.log(c);
+
+//El array.fill llena las 100 posiciones indicadas en false
+const d = Array(100).fill(false);
+console.log(d);
+
+const colores = ["rojo","verde","azul"];
+console.log(colores);
+
+//Agrego un elemento al arreglo (agrega al final)
+colores.push("negro");
+console.log(colores);
+// Pop me elimina el ultimo elemento del arreglo
+colores.pop();
+console.log(colores);
+
+//Este metodo me permite recorrer el arreglo, sus elementos y el indice(index)
+colores.forEach(function(el,index) {
+    console.log(`<li id="${index}"> ${el} </li>`)
+
+});
+
+</script>
+</html>
