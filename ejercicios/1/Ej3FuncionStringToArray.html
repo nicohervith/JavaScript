@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+</head>
+<body> 
+ <h1> Fundamentos JavaScript</h1>
+</body>
+<script>
+
+/*
+3) Programar una funcion que dada una string te devuelva un array de textos separados por cierto caracter
+*/
+
+const stringToArray = (cadena="", separador = undefined) => 
+(!cadena)
+    ? console.warn("No agregaste cadena de texto")
+    : (separador === undefined)
+        ? console.warn("No ingresaste el caracter separador")
+        : console.info(cadena.split(separador))
+
+stringToArray ("No agregaste cadena de texto", "")
+
+
+</script>
+</html>

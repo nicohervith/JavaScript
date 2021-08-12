@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+</head>
+<body> 
+ <h1> Fundamentos JavaScript</h1>
+</body>
+<script>
+
+
+function devuelveValor(){
+    console.log("uno");
+    //En este caso el primer return detendria la ejecucion porque lee ese dato y se frena
+    return 19;
+    console.log("dos");
+    return "La funcion retorna esta cadena de texto"
+}
+
+let valorDeFuncion = devuelveValor();
+//invocacion
+console.log(valorDeFuncion);
+
+//Recibir parametros en funcion
+function saludar (nombre,edad) {
+    console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años`);
+}
+ 
+saludar("Nicolas",24);
+
+//Funcion declarada
+// Puedo invocarla incluso antes de la funcion
+declarada();
+
+function Declarada( ) {
+    console.log("Esta funcion es declara, puede ejecutarse en cualquier parte del codigo");
+}
+declarada();
+
+//Funcion anonima, se le asigna el nombre del const (es tambien una arrow function => )
+// NO PUEDO ACCEDER A ESTA FUNCION ANTES DE DECLARARLA, AL CONTRARIO QUE LA FUNCION DECLARADA
+const functionExpresada = function (){
+    console.log("Esto es una funcion expresada, se le a asignado como valor a una variable");
+
+}
+
+function functionExpresada();
+
+</script>
+</html>

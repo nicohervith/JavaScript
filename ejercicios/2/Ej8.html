@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+</head>
+<body> 
+ <h1> Fundamentos JavaScript</h1>
+</body>
+<script>
+
+/* 8) Programa una función que elimine cierto patrón de caracteres de 
+un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5 */
+
+//Mi solución. A corregir que me convierte la string en un array
+/*const EliminarCaracter = (palabra="", eliminar="") => {
+    if(!palabra) return console.warn("No ingresaste palabra");
+
+    if(!eliminar) return console.warn("No ingresaste texto a eliminar")
+    return console.log(palabra.split(eliminar));
+
+}
+EliminarCaracter("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz")
+*/
+
+
+const EliminarCaracter = (texto="", eliminar="") => {
+    (!texto)
+     ? console.warn("No ingresaste palabra")
+     :(!eliminar)
+        ? console.warn("No ingresaste texto a eliminar")
+        : console.info(texto.replace(new RegExp(eliminar,"ig"),""))
+}
+//En este caso, le paso las banderas "ig"
+// i evita que distinga entre mayus y minus, y g permite 
+//que no se detenga en la primer coincidencia
+EliminarCaracter("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz")
+
+
+</script>
+</html>

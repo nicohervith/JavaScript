@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+</head>
+<body> 
+ <h1> Fundamentos JavaScript</h1>
+</body>
+<script>
+
+/* 19) Programa una función que valide que un texto sea un nombre válido 
+pe. miFuncion("Jonathan MirCha") devolverá verdadero */
+
+const validarNombre = (nombre="") =>{
+    if(!nombre) return console.warn("")
+    if (typeof nombre !=="string") return console.error("no")
+    let expReg = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/g.test(nombre);
+    return (expReg)
+    ? console.info(`${nombre}, es un nombre valido `)
+    : console.info(`${nombre}, no es un nombre valido `)
+}
+validarNombre("Nicolás")
+
+</script>
+</html

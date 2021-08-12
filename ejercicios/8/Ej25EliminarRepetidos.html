@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+</head>
+<body> 
+ <h1> Fundamentos JavaScript</h1>
+</body>
+<script>
+
+/* 25) Programa una función que dado un arreglo de elementos, elimine los duplicados
+ pe. miFuncion(["x", 10, "x", 2, "10", 10, true, true]) devolverá ["x", 10, 2, "10", true]  */
+const evaluarArray  = (arr) =>{
+ let result = arr.filter((item,index)=>{
+      return arr.indexOf(item) === index;
+    })
+    console.log(result); //[1,2,6,5,9,'33']
+}
+evaluarArray([1,2,6,1,2,5,9,'33','33'])
+
+
+
+</script>
+</html

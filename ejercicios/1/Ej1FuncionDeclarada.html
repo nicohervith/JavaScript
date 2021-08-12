@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+</head>
+<body> 
+ <h1> Fundamentos JavaScript</h1>
+</body>
+<script>
+/*
+1) Programar una funcion que cuente el numero de caracteres en una cadena de texto
+Ej: miFuncion ("Hola mundo") --> devolverá 10
+*/
+
+//Solucion jonMircha
+/*function contarCaracteres(cadena = ""){
+    if(!cadena){
+        console.warn("No ingresaste ninguna cadena");
+    } else {
+        console.info(`La cadena "${cadena}" tiene ${cadena.length} caracteres`)
+    }
+}*/
+ 
+//Funciona igual que la solucion anterior pero mas optimizado
+const contarCaracteres = (cadena= "") => 
+// El ? y el : Representan el if/else
+(!cadena) 
+    ? console.warn("No ingresaste ninguna cadena") 
+    : console.info(`La cadena "${cadena}" tiene ${cadena.length} caracteres`)
+
+contarCaracteres("Hola mundo");
+
+/*
+function saludar(){
+    let mensaje = "Hola mundo"
+    console.log (mensaje.length);
+}
+
+let saludo = saludar();
+console.log(saludo);
+
+
+var a = [
+  'Hydrogen',
+  'Helium',
+  'Lithium',
+  'Beryllium'
+];
+
+var a2 = a.map(function(s) { return s.length; });
+
+console.log(a2); // logs [8, 6, 7, 9]
+
+var a3 = a.map(s => s.length);
+
+console.log(a3); // logs [8, 6, 7, 9]
+*/
+//Otras opciones que encontré en mdn
+
+
+</script>
+</html>

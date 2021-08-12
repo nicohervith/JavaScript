@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+</head>
+<body> 
+ <h1> Fundamentos JavaScript</h1>
+</body>
+<script>
+
+//Los objetos reciben cualquier tipo de dato
+const nicolas = {
+    nombre: "nicolas",
+    apellido: "hervith",
+    edad:24,
+    pasatiempos: ["deporte", "futbol", "cs"],
+saludar: function (){
+    console.log(`hola`);
+},
+decirMiNombre:function (){
+    console.log(`Me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} `)
+}
+}
+
+// Dentro de un objeto a las variables se las llama atributos y a las funciones metodos
+console.log(nicolas["nombre"] );
+console.log(nicolas.nombre);
+console.log(nicolas.pasatiempos[2]);
+nicolas.saludar();
+nicolas.decirMiNombre();
+
+//Me devuelve un listado con todas las keys del objeto nicolas
+console.log(Object.keys(nicolas));
+
+// Me devuelve los valores del objeto nicolas
+console.log(Object.values(nicolas));
+
+//Me devuelve un true, porque reconoce que en el objeto existe el campo "nombre"
+console.log(Object.hasOwnProperty("nombre"));
+
+
+
+</script>
+</html>

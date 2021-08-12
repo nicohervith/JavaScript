@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+</head>
+<body> 
+ <h1> Fundamentos JavaScript</h1>
+</body>
+<script>
+
+/*
+10) Programar función que reciba un número y evalúe si es capicua o no
+Ej: mifuncion(202) devolverá True
+*/
+
+const capicua = (numero=0) => {
+    if (!numero) return console.warn("No ingresaste cadena");
+    
+    if(typeof numero !== "number") return console.error("El valor ingresado no es un numero");
+  
+    numero = numero.toString();
+    let alReves = numero.split("").reverse().join("");
+
+    return (numero === alReves)
+     ? console.info(`Si es capicua, Numero original ${numero}, numero al reves ${alReves} `)
+     : console.info(`No es capicua, Numero original ${numero}, numero al reves ${alReves} `)
+}
+
+capicua(202);
+capicua(2002);
+capicua(123214)
+
+
+
+</script>
+</html>

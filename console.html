@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+</head>
+<body> 
+ <h1> Fundamentos JavaScript</h1>
+</body>
+<script>
+
+/* **********     Curso JavaScript: 26. Objeto console - #jonmircha     ********** */
+ console.log(console);
+console.error("Esto es un error");
+console.warn("Esto es un aviso");
+console.info("Esto es un mensje informativo");
+console.log("Un registro de lo que ha pasado en nuestra aplicación");
+let nombre = "Jon",
+  apellido = "MirCha",
+  edad = 35;
+console.log(nombre);
+console.log(apellido);
+console.log(edad);
+console.log(nombre, apellido, edad);
+console.log(`Hola mi nombre es ${nombre} ${apellido} y tengo ${edad} años.`);
+
+//El % es como un comodín
+console.log(`Hola mi nombre es %s %s y tengo %d años.`, nombre, apellido, edad);
+
+//Para limpiar la consola
+console.clear();
+//Me devulve todas las propiedades de este objeto
+console.log(window);
+//Me muestra el html
+console.log(document);
+console.dir(window);
+//Me muestra las propiedades del documento
+console.dir(document);
+console.clear();
+
+//Junto todo en un grupo y lo finalizo en el groupEnd
+console.group("Cursos de @jonmircha en YouTube");
+console.log("Curso de JavaScript");
+console.log("Curso de Node.js");
+console.log("Curso de PWAs");
+console.log("Curso de Flexbox");
+console.log("Curso de Diseño y Programación Web");
+console.groupEnd();
+
+
+
+console.groupCollapsed("Cursos de @jonmircha en YouTube");
+console.log("Curso de JavaScript");
+console.log("Curso de Node.js");
+console.log("Curso de PWAs");
+console.log("Curso de Flexbox");
+console.log("Curso de Diseño y Programación Web");
+console.groupEnd();
+
+console.clear();
+
+
+console.log(console);
+
+//Me devuelve una tabla de valores de los objetos (El sort me lo devuelve en orden alfabetico)
+console.table(Object.entries(console).sort());
+
+
+const numeros = [1, 2, 3, 4, 5],
+  vocales = ["a", "e", "i", "o", "u"];
+//Debo invocarlos por separado
+console.table(numeros);
+console.table(vocales);
+
+
+const perro = {
+  nombre: "Boni",
+  raza: "Boxer",
+  color: "cafe"
+}
+console.table(perro);
+console.clear();
+
+//El time y el time end deben llevar la misma "etiqueta" que es 'Cuanto tiempo tarda mi código'
+console.time('Cuanto tiempo tarda mi código');
+const arreglo = Array(1000000);
+//Almaceno la posición como valor
+for (let i = 0; i < arreglo.length; i++) {
+  arreglo[i] = i;
+}
+console.timeEnd('Cuanto tiempo tarda mi código');
+//console.log(arreglo);
+console.clear();
+
+//Llevar un conteo de ejecucion de algo
+for (let i = 0; i <= 100; i++) {
+  console.count("código for");
+  console.log(i);
+}
+console.clear();
+
+
+
+let x = 3,
+  y = 2,
+  pruebaXY = "Se espera que X siempre sea menor que Y";
+//Si la prueba es correcta no ejecuta nada
+//Solo lo veo en consola cuando la prueba falla
+console.assert(x < y, { x, y, pruebaXY }); 
+
+
+</script>
+</html>

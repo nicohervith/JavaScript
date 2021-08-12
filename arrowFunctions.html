@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+</head>
+<body> 
+ <h1> Fundamentos JavaScript</h1>
+</body>
+<script>
+
+/* **********     Curso JavaScript: 21. Arrow Functions - #jonmircha     ********** */
+
+const saludar = () => console.log(`Hola`);
+    saludar(); 
+
+//Hay tambien un return implícito, me duvuelve hola irma
+const saludar = nombre => console.log(`Hola ${nombre}`);
+    saludar("Irma");
+ 
+
+   
+//Si los parametros de la funcion son mas de 1 debe ir en parentesis
+    const sumar = function (a, b) {
+    return a + b;
+    } 
+
+const sumar = (a, b) => a + b;
+console.log(sumar(9, 9));
+
+
+
+const funcionDeVariasLineas = () => {
+
+console.log("Uno");
+console.log("Dos");
+console.log("Tres");
+ }   
+funcionDeVariasLineas();
+
+
+//Me imprime el arreglo de numeros indicando la pos de cada elemento
+const numeros = [1, 2, 3, 4, 5];
+numeros.forEach((el, index) => console.log(`${el} esta en la posición ${index}`));
+
+//this se vuelve objeto window
+/*function Perro() {
+    console.log(this);
+      }
+Perro(); */
+
+
+//En este contexto this hace referencia al objeto 
+//Las arrow functions reconocen el contexto donde se encuentra el objeto en el que se declaró
+const perro = {
+nombre: "kenai",
+ladrar() {
+    console.log(this)
+          }
+        }
+perro.ladrar();
+
+
+</script>
+</html>

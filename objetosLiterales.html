@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+</head>
+<body> 
+ <h1> Fundamentos JavaScript</h1>
+</body>
+<script>
+
+ /* **********     Curso JavaScript: 19. Objetos literales - #jonmircha     ********** */
+     let nombre = "kEnAi",
+      edad = 7;
+    //Esto se púede mejorar
+      const perro = {
+      nombre: nombre,
+      edad: edad,
+      ladrar: function () {
+        console.log("guauu guauu!!!")
+      }
+    }
+    //Aca se mejora
+    console.log(perro);
+    perro.ladrar()
+    const dog = {
+      nombre,
+      edad,
+      raza: "Callejero",
+      ladrar() {
+        console.log("guauu guauu guauu!!!")
+      }
+    }
+    console.log(dog);
+    dog.ladrar(); 
+
+</script>
+</html>

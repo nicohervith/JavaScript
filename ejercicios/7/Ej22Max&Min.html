@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+</head>
+<body> 
+ <h1> Fundamentos JavaScript</h1>
+</body>
+<script>
+
+/* 22) Programa una función que dado un array devuelva el número mas alto y el más bajo de dicho array
+pe. miFuncion([1, 4, 5, 99, -60]) devolverá [99, -60] */
+const getMax=(arr= undefined) =>{
+    if(arr===undefined) return console.warn("")
+    if(!(arr instanceof Array)) return console.error("")
+    if(arr.length=== 0) return console.error("")
+    for (let num of arr){
+        if(typeof num!== "number") return console.error("")
+    }
+    return console.info(`Arreglo original: ${arr}\nValor mayor: ${Math.max(...arr)}  \nValor menor: ${Math.min(...arr)} `)
+}
+getMax([1, 4, 5, 99, -60])
+
+
+</script>
+</html

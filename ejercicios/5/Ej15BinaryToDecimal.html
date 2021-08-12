@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+</head>
+<body> 
+ <h1> Fundamentos JavaScript</h1>
+</body>
+<script>
+    
+/* 15) Programa una función para convertir números de base binaria a 
+decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10 */
+
+//var str = "11";
+//var bin = (+str).toString(2);
+//console.log(bin)
+
+const decimalToBinary = (numero="") => {
+    let bin = (+numero).toString(2);
+    console.log(bin)
+}
+decimalToBinary(123)
+
+const BinaryToDecimal =(num) =>{
+  sum = 0
+  let numReverse = num.split('').reverse().join('')
+  for (i = 0; i < numReverse.length; i++) {
+    sum = sum + numReverse[i] * 2 ** numReverse.length - 1;
+  }
+  return sum;
+}
+
+console.log(BinaryToDecimal("100"));
+
+
+</script>
+</html

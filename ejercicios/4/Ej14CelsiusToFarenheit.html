@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+</head>
+<body> 
+ <h1> Fundamentos JavaScript</h1>
+</body>
+<script>
+
+/* 14) Programa una función para convertir grados 
+Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F */
+    
+const convertirgrados =(grados=undefined, unidad=undefined) =>{
+    if(grados ===undefined) return console.warn("")
+    if(typeof grados !== "number") return console.error("")
+
+    if (unidad===undefined) return console.warn("")
+
+    if (typeof unidad !== "string") return console.error("")
+    if(unidad.length !==1 || !/(C|F)/.test(unidad)) return console.warn("")
+    if (unidad ==="C"){
+        return console.info(`${grados}°C = ${Math.round((grados*(9/5))+32)} °F `);
+    } else if (unidad ==="F"){
+        return console.info(`${grados}°F = ${Math.round(((grados -32) * (5/9)))} °C `);
+    }
+}
+
+convertirgrados(0,"C");
+convertirgrados(32,"F");
+
+
+
+
+
+</script>
+</html>

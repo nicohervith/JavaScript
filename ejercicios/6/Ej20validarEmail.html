@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+</head>
+<body> 
+ <h1> Fundamentos JavaScript</h1>
+</body>
+<script>
+
+ /* 20) Programa una función que valide que un texto sea un email válido
+  pe. miFuncion("jonmircha@gmail.com") devolverá verdadero */
+
+const validEmail = (email='') => {
+    emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+    //Se muestra un texto a modo de ejemplo, luego va a ser un icono
+    if (emailRegex.test(email)) {
+      return console.log("El email es válido");
+    } else {
+      return console.log("El email es incorrecto");
+    }
+};
+validEmail('nico@gmail.com')
+
+</script>
+</html
